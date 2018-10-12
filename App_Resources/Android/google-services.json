@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "715582119153",
+    "firebase_url": "https://hvscroll.firebaseio.com",
+    "project_id": "hvscroll",
+    "storage_bucket": "hvscroll.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715582119153:android:f8d2bcd116e3b6ed",
+        "android_client_info": {
+          "package_name": "org.nativescript.HVScrollTest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715582119153-goi6h227pce81c165cn6be9bmnh944jg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfFEaWbQjSjz7DbZTTVY-gYpZ3M9EVvdM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
