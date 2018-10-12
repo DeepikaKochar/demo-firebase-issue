@@ -1,0 +1,36 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+
+<GridLayout class="page">
+    <RadListView [items]="curriculums">
+        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
+        <ng-template tkListItemTemplate let-curri="item">
+            <StackLayout orientation="Vertical" class="container">
+                <Label class="h2 p-l-8 p-r-8" [text]="curri.name"></Label>
+                <RadListView [items]="curri.list" class="radlistview-child">
+                    <ListViewLinearLayout tkListViewLayout itemHeight="230" itemWidth="140" dynamicItemSize="false" scrollDirection="Horizontal" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
+                    <ng-template tkListItemTemplate let-item="item">
+                        <GridLayout rows="*" columns="*" width="140" class="container">
+                            <Image [src]="item.imageSrc" stretch="aspectFill" width="140" height="130" class="image-gallery " loadMode="async"></Image>
+                            <GridLayout verticalAlignment="bottom">
+                                <StackLayout backgroundColor="#BBFFFFFF" class="m-y-10 p-5 ">
+                                    <Label [text]="item.name" class="countryName"></Label>
+                                    <Label [text]="item.desc" class="countryPop" ></Label>
+                                </StackLayout>
+                            </GridLayout>
+                        </GridLayout>
+                        <!-- <StackLayout width="120" orientation="Vertical" class="container">
+                            <Image [src]="item.imageSrc" backgroundColor="#ededed" class="image-gallery" stretch="aspectFill" width="120" height="120" loadMode="async"></Image>
+                            <Label class="p-8" [text]="item.name"></Label>
+                            <Label class="p-8" [text]="item.desc"></Label>
+                        </StackLayout> -->
+                    </ng-template>
+                    <!-- <ng-template tkListViewFooter>
+                        <Button text="Show more"></Button>
+                    </ng-template> -->
+                </RadListView>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
